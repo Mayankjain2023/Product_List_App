@@ -1,0 +1,22 @@
+<div class="navbar navbar-default navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="dashboard.home">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="dashboard.products">Products</a></li>
+                <!-- <li><a href="#">Users</a></li> -->
+                <!-- <li><a ui-sref="login">Logout</a></li> -->
+
+                
+            </ul>
+            <span class="pull-right" style="color:#fff; margin-top: 15px;">
+                <!-- {{currentTime}} -->
+                <ul><li><a ui-sref="login">Logout</a></li></ul>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div ui-view></div>

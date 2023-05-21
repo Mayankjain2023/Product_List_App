@@ -1,0 +1,24 @@
+
+<h1 style="text-align:center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Welcome</h1>
+<p style="text-align:center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Use this app to manage your products</p>
+<div ng-controller="homeCtrl">
+
+    <div class="container">
+        <div>
+            <!-- <div class="col"> -->
+                <div style="height: 350px; width:910px;">
+                    <div uib-carousel active="active" interval="myInterval">
+                        <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                                <img ng-src="{{slide.image}}" style="margin: auto;">
+                            <div class="carousel-caption">
+                                <!-- <h4>Slide {{slide.id}}</h4> -->
+                            <p style="font-family:'Gill Sans MT'; font-size: larger;">{{slide.text}}</p>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+           
+    
+        </div>
+    </div>
+</div>

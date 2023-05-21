@@ -1,0 +1,67 @@
+<h1 class="text-success">Register Yourself</h1>
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Fill the below form to get registered
+    </div>
+    <div class="panel-body">
+                
+        <form name="loginForm" action="login.html" ng-submit="submitForm(loginForm.$valid)" novalidate>
+
+            <div class="form-group" ng-class="{ 'has-error' : loginForm.firstname.$invalid && !loginForm.firstname.$pristine }">
+                <label>Name <i class="glyphicon glyphicon-info-sign" uib-tooltip="Enter your name here"></i></label>
+                    <input type="text" name="firstname" class="form-control" ng-model="firstname" ng-minlength="3" ng-maxlength="18" required>
+                    <p ng-show="loginForm.firstname.$dirty && loginForm.firstname.$error.required" class="help-block">*Name is required</p>
+                    <p ng-show="loginForm.firstname.$error.minlength" class="help-block">Name is too short.</p>
+                    <p ng-show="loginForm.firstname.$error.maxlength" class="help-block">Name is too long.</p>
+            </div> 
+
+            <div class="form-group">
+                <label for="">Date of Birth</label>
+                <p class="input-group">
+                    <input type="text" class="form-control" 
+                    uib-datepicker-popup="{{format}}"
+                    ng-model="birthDate" 
+                    is-open="datePickerOpened" 
+                    ng-required="true"
+                    close-text="Close" 
+                    placeholder="Date of Birth"
+                     readonly/>
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+            </div>
+           
+
+
+            <div class="form-group" ng-class="{ 'has-error' : loginForm.email.$invalid && !loginForm.email.$pristine }" >
+                <label >Email Address <i class="glyphicon glyphicon-info-sign" uib-tooltip="Email is mandatory"></i></label>
+                <input type="email" id="email" class="form-control" ng-model="email" placeholder="Enter email" ng-model="email" name="email" required>
+                <!-- <p ng-show="loginForm.email.$dirty && loginForm.email.$error.required" class="help-block">*Email is required</p> -->
+                <p ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="help-block">Enter a valid email.</p>
+
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : loginForm.phonenumber.$invalid && !loginForm.phonenumber.$pristine }">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" ng-model="phonenumber" ui-mask="(999) 999-9999"
+                 ui-mask-placeholder ui-mask-placeholder-char="_" required>
+            <p ng-show="loginForm.phonenumber.$invalid && !loginForm.phonenumber.$pristine" class="help-block">Please enter your phone number</p>
+            </div>
+
+           
+            <div class="form-group" ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+                <label>Password <i class="glyphicon glyphicon-info-sign" uib-tooltip="Enter your password"></i></label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" ng-model="password" ng-minlength="8" ng-maxlength="12" required>
+                <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine" class="help-block">Password must be between 8-12 characters.</p>
+            </div>
+
+
+
+            <button type="submit" value="Submit" class="btn btn-primary" ng-click="gotoLogin()" ng-disabled="loginForm.$invalid">Submit</button>
+            <button type="button" class="btn btn-primary" ng-click="openModal()">App Info</button>
+            <button type="submit" class="btn btn-primary" ng-click="gotoLogin()">Already Registered?</button>
+            
+        </form>
+    </div>
+</div>

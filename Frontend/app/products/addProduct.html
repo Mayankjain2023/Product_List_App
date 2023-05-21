@@ -1,0 +1,15 @@
+<form ng-submit="saveProduct()">
+    <div class="form-group" >
+      <label>Product Name</label>
+      <input type="text" class="form-control" ng-model="name" id="email">
+    </div>
+    <div class="form-group">
+        <label>Product Price</label>
+        <input type="number" class="form-control" ng-model="price" id="email">
+      </div>
+      
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a ui-sref="dashboard.products" type="button" class="btn btn-default">Cancel</a>
+
+  </form>
+  

@@ -1,0 +1,36 @@
+<h2>List of Products
+    <span class="pull-right">
+       <a ui-sref="dashboard.addProduct" class="btn btn-primary">Add Product</a>
+    </span>
+</h2>
+
+<table ng-table="tableParams" class="table" show-filter="true" ng-init="getProducts()">
+   
+       <tr ng-repeat="product in $data">
+           <td>{{$index+1}}</td>
+           <td  title="'Name'" filter="{name:'text'}" sortable="'name'" >
+            {{product.name}}
+           </td>
+           <td title="'Price'" filter="{price:'number'}" sortable="'price'">
+            {{product.price}}
+            </td>
+           <td>
+               <a ui-sref="dashboard.editProduct({productId:product._id})"
+                class="btn btn-warning btn-xs">Edit</a>
+               <button class="btn btn-danger btn-xs" 
+                ng-click="deleteProduct(product._id)">Delete</button>
+            </td>
+       </tr>
+</table>
+
+
+
+<!-- 
+<table ng-table="tableParams" class="table" show-filter="true">
+    <tr ng-repeat="product in $data">
+        <td title="'Name'" filter="{name:'text'}" sortable="'name'" >{{product.name}}</td>
+        <td title="'Price'" filter="{price:'number'}" sortable="'price'" >{{product.price}}</td>
+
+    </tr>
+
+</table> -->

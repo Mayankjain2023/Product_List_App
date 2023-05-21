@@ -1,0 +1,29 @@
+<h1 class="text-success">Login,to your App</h1>
+
+<div class="panel panel-info">
+    <div class="panel-heading"><h5>Fill your details</h5></div>
+    <div class="panel-body">
+                
+        <form name="loginForm" ng-submit="submitForm(loginForm.$valid)" novalidate>
+            <div class="form-group" ng-class="{ 'has-error' : loginForm.userName.$invalid && !loginForm.userName.$pristine }">
+            <label>Username  <i class="glyphicon glyphicon-info-sign" uib-tooltip="Kindly enter your email"></i></label>
+            <input type="email" id="userName" class="form-control"  placeholder="Enter email" ng-model="userName" name="userName" required>
+            <p ng-show="loginForm.userName.$invalid && !loginForm.userName.$pristine" class="help-block">Enter a valid email.</p>
+            
+            </div>
+
+
+            <div class="form-group" ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+            <label>Password  <i class="glyphicon glyphicon-info-sign" uib-tooltip="Enter your password here"></i></label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" ng-model="password" ng-minlength="8" ng-maxlength="12" required>
+            <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine" class="help-block">Password must be between 8-12 characters.</p>
+                
+            </div>
+            
+           
+            <button type="submit" value="Submit" class="btn btn-primary" ng-click="gotoProducts()" ng-disabled="loginForm.$invalid">Submit</button>
+            <button type="submit" class="btn btn-primary" ng-click="gotoRegister()">Not Registered?</button>
+            
+        </form>
+    </div>
+</div>

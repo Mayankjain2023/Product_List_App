@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/sweetAlert.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.30/angular-ui-router.min.js" integrity="sha512-HdDqpFK+5KwK5gZTuViiNt6aw/dBc3d0pUArax73z0fYN8UXiSozGNTo3MFx4pwbBPldf5gaMUq/EqposBQyWQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<!-- <script src="assets/js/angular-ui-router.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.27/angular-ui-router.min.js"></script>
+<!-- <script src="assets/js/mask.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.3/angular-animate.min.js" integrity="sha512-Vhup4/4s+jnmiFsp1Sg1/6jXncRbIBc+fKemYjq1n+nEXthmeASyaWnClWsAV5Sas7WbLMLNYYHw6TxwQE4oPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.8.3/angular-touch.min.js" integrity="sha512-f7nfAhahVgkfGWX/Ya3gmMaz9b2nSRI9Q3eftG+NH4W8NEOgWen8Rkv/p5ZL9WTTewoscB+dtO0YXNoJOxIv+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.3/angular-sanitize.min.js" integrity="sha512-dqbRITjlgYAKHWHwL8fK7VPOsFc702ybywomtYLRcjOzBHM3WgEGN0SQQR6IJKY4ZiJiZkNguOAcFZmalk+2sA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- imp for bootstrap0 -->
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> 
+<script src="bower_components/angular-ui-mask/dist/mask.min.js"></script>
+
+<!-- ng-table -->
+<link rel="stylesheet" href="bower_components/ng-table/bundles/ng-table.min.css">
+<script src="bower_components/ng-table/bundles/ng-table.min.js"></script>
+
+<!-- ngsweetAlert -->
+<link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
+<script src="bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+
+<!-- ngtoast -->
+<link rel="stylesheet" href="bower_components/ngToast/dist/ngToast.min.css">
+<script src="bower_components/ngToast/dist/ngToast.min.js"></script>
+
+
+
+
+<!-- //files -->
+<script src="app.js"></script>
+<script src="httpService.js"></script>
+<script src="app/login/loginCtrl.js"></script>
+<script src="app/register/registerCtrl.js"></script>
+<script src="app/register/modalCtrl.js"></script>
+
+<script src="app/home/homeCtrl.js"></script>
+
+<script src="app/dashboard/dashboardCtrl.js"></script>
+<script src="app/products/allProductsCtrl.js"></script>
+<script src="app/products/editProductCtrl.js"></script>
+<script src="app/products/addProductCtrl.js"></script>
+
+
+
+
+<body ng-app="myApp">
+
+<div class="container" style="background:#f2f2f2; margin-top: 15px; padding-bottom: 20px;">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <!-- <div class="jumbotron"> -->
+                <!-- <h1 class="text-success">CRUD App</h1> -->
+                <hr> 
+                <div ui-view>
+
+                </div>
+            <!-- </div> -->
+
+
+        </div>
+    </div>
+</div>
+<toast></toast>
+
+
+
+</body>
+</html>
